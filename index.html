@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="todolist.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script type="text/javascript" src="todolist.js"></script>
+        <script type="text/javascript" src="localstorage.js"></script>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Rainbowdash - ToDoList</title>
+    </head>
+    <body onload="loadData();">
+        <div id="opciones">
+           <div id="paleta">
+            </div>
+            <div id="botones">
+            <button type="button" class="btn btn-default left" onclick="marcar(true);">Seleccionar todo</button>
+            <button type="button" class="btn btn-primary left" onclick="marcar(false);">Deseleccionar todo</button>
+            <button type="button" class="btn btn-danger left" onclick="eliminar()">Eliminar notas</button>
+            <button type="button" class="btn btn-info left" onclick="sort()">Ordenar</button>
+            <!--<button type="button" class="btn btn-warning left" onclick="saveData()">Guardar cambios</button>-->
+            <button type="button" class="btn btn-success left" onclick="myFunction()">Nueva nota [+]</button>
+            </div>           
+            <textarea maxlength="80" id="area" class="form-control" rows="1" placeholder="Escriba aquí su tarea..." onkeyup="saveSession()"></textarea>
+           <!-- <textarea maxlength="80" id="tag" class="form-control" rows="1" placeholder="Añada una etiqueta" onkeyup="saveSession()"></textarea>  -->
+        </div>
+        <div id="notas">
+        <p class="center">Mis notas</p>
+        <ol id="lista" name="lista">
+        </ol>
+        </div>
+        <div id="info">David Abrante Curbelo - 2º DAW A</div> 
+    </body>
+
+</html>
